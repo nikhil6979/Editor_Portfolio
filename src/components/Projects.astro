@@ -1,0 +1,592 @@
+---
+// Projects.astro — professional bento grid, cinematic hover states
+---
+<section class="projects" id="work">
+  <div class="projects-wrap">
+
+    <!-- Header -->
+    <div class="section-header">
+      <div class="header-left">
+        <span class="eyebrow">05 / Selected Works</span>
+        <h2 class="section-title">RECAP <span class="title-accent">2026</span></h2>
+      </div>
+      <div class="header-tags">
+        <span class="tag">Video Editing</span>
+        <span class="tag tag-red">No AI</span>
+      </div>
+    </div>
+
+    <!-- Bento Grid -->
+    <div class="bento">
+
+      <!-- Card A: Tall (spans 2 rows) -->
+      <div class="bento-card card-a project-card" data-video="/video/piyushi ver.mp4">
+        <video autoplay loop muted playsinline class="card-video" poster="/aa37f4fcb14339455cdd58dc0b38cc78926564f9.png">
+          <source src="/video/piyushi ver.mp4" type="video/mp4" />
+        </video>
+        <div class="card-overlay">
+          <button class="play-ring" aria-label="Watch video">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+          <div class="card-meta">
+            <h3>Piyushi Story</h3>
+            <span>Short-form · Social</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card B: Square top-right -->
+      <div class="bento-card card-b project-card" data-video="/video/ammi bengali ver.mp4">
+        <video autoplay loop muted playsinline class="card-video" poster="/e7638c5085a12e4aa2c71e807f0689002cb88ab1.png">
+          <source src="/video/ammi bengali ver.mp4" type="video/mp4" />
+        </video>
+        <div class="card-overlay">
+          <button class="play-ring" aria-label="Watch video">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+          <div class="card-meta">
+            <h3>Ammi Bengali</h3>
+            <span>VFX · Vertical</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card C: Wide bottom-right -->
+      <div class="bento-card card-c project-card" data-video="/video/montage land.mp4">
+        <video autoplay loop muted playsinline class="card-video" poster="/fd5d54f5f0b558cf4d87835ab8c145dc6127fbf7.png">
+          <source src="/video/montage land.mp4" type="video/mp4" />
+        </video>
+        <div class="card-overlay">
+          <button class="play-ring" aria-label="Watch video">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+          <div class="card-meta">
+            <h3>Showreel Montage</h3>
+            <span>Cinematic · Editing</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card D: Wide horizontal -->
+      <div class="bento-card card-d project-card" data-video="/video/vikrant01 land.mp4">
+        <video autoplay loop muted playsinline class="card-video" poster="/6320734d95690ba96935609d13e464a8dfeb8777.png">
+          <source src="/video/vikrant01 land.mp4" type="video/mp4" />
+        </video>
+        <div class="card-overlay">
+          <button class="play-ring" aria-label="Watch video">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+          <div class="card-meta">
+            <h3>Vikrant Promo</h3>
+            <span>Brand · Landscape</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card E: Wide -->
+      <div class="bento-card card-e project-card" data-video="/video/vikrant02 ver.mp4">
+        <video autoplay loop muted playsinline class="card-video" poster="/91edff0b92a3f9c6374abaf9ec3585eddbba61f9.png">
+          <source src="/video/vikrant02 ver.mp4" type="video/mp4" />
+        </video>
+        <div class="card-overlay">
+          <button class="play-ring" aria-label="Watch video">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+          <div class="card-meta">
+            <h3>Vikrant Cinematic</h3>
+            <span>Short-form · Vertical</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card F (Hidden initially) -->
+      <div class="bento-card card-f project-card more-card" data-video="/video/beach landscape.mp4" style="display: none;">
+        <video autoplay loop muted playsinline class="card-video" poster="/6320734d95690ba96935609d13e464a8dfeb8777.png">
+          <source src="/video/beach landscape.mp4" type="video/mp4" />
+        </video>
+        <div class="card-overlay">
+          <button class="play-ring" aria-label="Watch video">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+          <div class="card-meta">
+            <h3>Beach Landscape</h3>
+            <span>Landscape · Brand</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card G (Hidden initially) -->
+      <div class="bento-card card-g project-card more-card" data-video="/video/karan land.mp4" style="display: none;">
+        <video autoplay loop muted playsinline class="card-video" poster="/fd5d54f5f0b558cf4d87835ab8c145dc6127fbf7.png">
+          <source src="/video/karan land.mp4" type="video/mp4" />
+        </video>
+        <div class="card-overlay">
+          <button class="play-ring" aria-label="Watch video">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+          <div class="card-meta">
+            <h3>Karan Promo</h3>
+            <span>Cinematic · Editing</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card H (Hidden initially) -->
+      <div class="bento-card card-h project-card more-card" data-video="/video/suchamp land.mp4" style="display: none;">
+        <video autoplay loop muted playsinline class="card-video" poster="/6320734d95690ba96935609d13e464a8dfeb8777.png">
+          <source src="/video/suchamp land.mp4" type="video/mp4" />
+        </video>
+        <div class="card-overlay">
+          <button class="play-ring" aria-label="Watch video">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+          <div class="card-meta">
+            <h3>Suchamp</h3>
+            <span>Landscape · Promo</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card I (Hidden initially) -->
+      <div class="bento-card card-i project-card more-card" data-video="/video/generation.mp4" style="display: none;">
+        <video autoplay loop muted playsinline class="card-video" poster="/fd5d54f5f0b558cf4d87835ab8c145dc6127fbf7.png">
+          <source src="/video/generation.mp4" type="video/mp4" />
+        </video>
+        <div class="card-overlay">
+          <button class="play-ring" aria-label="Watch video">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+          <div class="card-meta">
+            <h3>Generation</h3>
+            <span>Creative · Direction</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="load-more-container">
+      <button id="load-more-btn" class="load-more-btn">Load More</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── Modal ──────────────────────────────────────── -->
+<div id="video-modal" class="modal" aria-hidden="true">
+  <div class="modal-bg"></div>
+  <div class="modal-box">
+    <button id="modal-close" class="close-btn" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M18 6L6 18M6 6l12 12"/>
+      </svg>
+    </button>
+    <video id="modal-player" controls playsinline></video>
+  </div>
+</div>
+
+<style>
+  /* ═══════════════════════════════════════════════════
+     PROJECTS SECTION
+  ═══════════════════════════════════════════════════ */
+  .projects {
+    width: 100%;
+    padding: 140px 64px;
+    background: #0b0f10;
+  }
+
+  .projects-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+
+  /* ── Header ──────────────────────────────────────── */
+  .section-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .header-left {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .eyebrow {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #7bd0ff;
+  }
+
+  .section-title {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(64px, 8vw, 96px);
+    font-weight: 400;
+    line-height: 1;
+    color: #e0e3e5;
+    margin: 0;
+    letter-spacing: 0.02em;
+  }
+
+  .title-accent {
+    color: #45464d;
+    -webkit-text-stroke: 1px rgba(255,255,255,0.2);
+  }
+
+  .header-tags {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .tag {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #c6c6cd;
+    padding: 7px 16px;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 999px;
+  }
+
+  .tag-red {
+    color: #ffb3b6;
+    border-color: rgba(255, 179, 182, 0.25);
+    background: rgba(255, 179, 182, 0.06);
+  }
+
+  /* ── Bento Grid ──────────────────────────────────── */
+  /*
+   Layout (5 cards):
+   [ A tall ] [ B sq   ] [ C sq   ]
+   [ A tall ] [ D wide         ]
+              [ E wide         ]
+  */
+  .bento {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 300px 260px 260px;
+    grid-auto-rows: 260px;
+    gap: 16px;
+  }
+
+  .card-a { grid-column: 1; grid-row: 1 / 3; }
+  .card-b { grid-column: 2; grid-row: 1; }
+  .card-c { grid-column: 3; grid-row: 1; }
+  .card-d { grid-column: 2 / 4; grid-row: 2; }
+  .card-e { grid-column: 1 / 4; grid-row: 3; }
+  .card-f { grid-column: 1 / 3; grid-row: 4; }
+  .card-g { grid-column: 3; grid-row: 4; }
+  .card-h { grid-column: 1 / 3; grid-row: 5; }
+  .card-i { grid-column: 3; grid-row: 5; }
+
+  /* Load More Button */
+  .load-more-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+  }
+
+  .load-more-btn {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #0b0f10;
+    background: #e0e3e5;
+    padding: 12px 32px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .load-more-btn:hover {
+    background: #7bd0ff;
+    transform: translateY(-2px);
+  }
+
+  /* ── Card base ───────────────────────────────────── */
+  .bento-card {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #191c1e;
+    border: 1px solid rgba(255,255,255,0.06);
+    cursor: pointer;
+    group: '';
+  }
+
+  .card-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16,1,0.3,1);
+  }
+
+  .bento-card:hover .card-video {
+    transform: scale(1.06);
+  }
+
+  /* Hover overlay */
+  .card-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+      to top,
+      rgba(11, 15, 16, 0.95) 0%,
+      rgba(11, 15, 16, 0.45) 50%,
+      rgba(11, 15, 16, 0.1) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    padding: 24px;
+  }
+
+  .bento-card:hover .card-overlay {
+    opacity: 1;
+  }
+
+  /* Play button */
+  .play-ring {
+    width: 64px; height: 64px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+    transform: scale(0.8);
+    transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1), background 0.2s;
+    margin-bottom: 16px;
+  }
+
+  .bento-card:hover .play-ring {
+    transform: scale(1);
+  }
+
+  .play-ring:hover {
+    background: rgba(123, 208, 255, 0.2);
+  }
+
+  .play-ring svg {
+    width: 24px; height: 24px;
+    margin-left: 4px; /* optical centre */
+  }
+
+  /* Card meta text */
+  .card-meta {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    right: 24px;
+    transform: translateY(8px);
+    transition: transform 0.3s ease;
+  }
+
+  .bento-card:hover .card-meta {
+    transform: translateY(0);
+  }
+
+  .card-meta h3 {
+    font-family: 'Anton', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: #fff;
+    margin: 0 0 4px;
+    letter-spacing: 0.02em;
+  }
+
+  .card-meta span {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #7bd0ff;
+  }
+
+  /* ── Modal ───────────────────────────────────────── */
+  .modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s, visibility 0.4s;
+  }
+
+  .modal.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .modal-bg {
+    position: absolute;
+    inset: 0;
+    background: rgba(7, 10, 11, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .modal-box {
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    max-width: 1100px;
+    aspect-ratio: 16/9;
+    background: #000;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.1);
+    overflow: hidden;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+    transform: scale(0.94) translateY(24px);
+    transition: transform 0.4s cubic-bezier(0.16,1,0.3,1);
+  }
+
+  .modal.active .modal-box {
+    transform: scale(1) translateY(0);
+  }
+
+  .modal-box #modal-player {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    outline: none;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 16px; right: 16px;
+    z-index: 10;
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .close-btn:hover {
+    background: rgba(255,255,255,0.15);
+    transform: scale(1.1);
+  }
+
+  .close-btn svg { width: 20px; height: 20px; }
+
+  /* ── Responsive ──────────────────────────────────── */
+  @media (max-width: 1024px) {
+    .projects { padding: 100px 40px; }
+    .bento {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 280px 280px 260px;
+      grid-auto-rows: 260px;
+    }
+    .card-a { grid-column: 1; grid-row: 1 / 3; }
+    .card-b { grid-column: 2; grid-row: 1; }
+    .card-c { grid-column: 2; grid-row: 2; }
+    .card-d { grid-column: 1 / 3; grid-row: 3; }
+    .card-e { grid-column: 1 / 3; grid-row: 4; }
+    .card-f { grid-column: 1; grid-row: 5; }
+    .card-g { grid-column: 2; grid-row: 5; }
+    .card-h { grid-column: 1 / 3; grid-row: 6; }
+    .card-i { grid-column: 1 / 3; grid-row: 7; }
+  }
+
+  @media (max-width: 768px) {
+    .projects { padding: 80px 24px; }
+    .section-header { flex-direction: column; align-items: flex-start; gap: 20px; }
+    .bento {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-auto-rows: 240px;
+    }
+    .project-card { grid-column: 1 !important; grid-row: auto !important; height: 240px !important; }
+    
+    /* Always show overlay on mobile */
+    .card-overlay { opacity: 1; background: linear-gradient(to top, rgba(11,15,16,0.85) 0%, rgba(11,15,16,0.1) 60%); }
+    .play-ring { transform: scale(1); }
+    .card-meta { transform: translateY(0); }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const loadMoreBtn = document.getElementById('load-more-btn');
+    const moreCards = document.querySelectorAll('.more-card');
+
+    if (loadMoreBtn) {
+      loadMoreBtn.addEventListener('click', () => {
+        moreCards.forEach(card => {
+          (card as HTMLElement).style.display = 'block';
+        });
+        loadMoreBtn.style.display = 'none';
+      });
+    }
+
+    // --- Modal Logic ---
+    const projectCards = document.querySelectorAll('.project-card');
+    const modal = document.getElementById('video-modal')!;
+    const player = document.getElementById('modal-player') as HTMLVideoElement;
+    const closeBtn = document.getElementById('modal-close')!;
+
+    projectCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const videoSrc = (card as HTMLElement).dataset.video;
+        if (!videoSrc) return;
+        
+        player.src = videoSrc;
+        player.load();
+        
+        modal.classList.add('active');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        
+        player.play().catch(e => console.log('Autoplay blocked:', e));
+      });
+    });
+
+    const close = () => {
+      modal.classList.remove('active');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      player.pause();
+      setTimeout(() => { player.src = ''; }, 400);
+    };
+
+    if (closeBtn) closeBtn.addEventListener('click', close);
+    document.querySelector('.modal-bg')?.addEventListener('click', close);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+  });
+</script>

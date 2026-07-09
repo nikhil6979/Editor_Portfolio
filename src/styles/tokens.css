@@ -1,0 +1,103 @@
+:root {
+  /* Surfaces */
+  --color-surface:                #101415;
+  --color-surface-dim:            #101415;
+  --color-surface-bright:         #363a3b;
+  --color-surface-container-low:  #191c1e;
+  --color-surface-container:      #1d2022;
+  --color-surface-container-high: #272a2c;
+  --color-surface-container-lowest: #0b0f10;
+  --color-surface-container-highest: #323537;
+
+  /* Typography on Surface */
+  --color-on-surface:             #e0e3e5;
+  --color-on-surface-variant:     #c6c6cd;
+  
+  --color-inverse-surface:        #e0e3e5;
+  --color-inverse-on-surface:     #2d3133;
+
+  /* Outlines */
+  --color-outline:                #909097;
+  --color-outline-variant:        #45464d;
+
+  /* Primary (steel blue) */
+  --color-primary:                #bec6e0;
+  --color-on-primary:             #283044;
+  --color-primary-container:      #0f172a;
+  --color-on-primary-container:   #798098;
+  --color-inverse-primary:        #565e74;
+
+  /* Secondary (crimson accent) */
+  --color-secondary:              #ffb3b6;
+  --color-on-secondary:           #68001a;
+  --color-secondary-container:    #cc003c;
+  --color-on-secondary-container: #ffdcdc;
+
+  /* Tertiary (electric blue — interactive/glow) */
+  --color-tertiary:               #7bd0ff;
+  --color-on-tertiary:            #00354a;
+  --color-tertiary-container:     #001a27;
+  --color-on-tertiary-container:  #008abb;
+  
+  /* Error */
+  --color-error:                  #ffb4ab;
+  --color-on-error:               #690005;
+  --color-error-container:        #93000a;
+  --color-on-error-container:     #ffdad6;
+}
+
+:root {
+  /* Display / Hero Headlines — Anton */
+  --font-headline-xl-family:      'Anton', sans-serif;
+  --font-headline-xl-size:        96px;
+  --font-headline-xl-weight:      400;
+  --font-headline-xl-line-height: 1.0;
+
+  /* Section Headlines — Anton */
+  --font-headline-lg-family:      'Anton', sans-serif;
+  --font-headline-lg-size:        48px;
+  --font-headline-lg-weight:      400;
+  --font-headline-lg-line-height: 1.1;
+
+  /* Mobile Headline — Anton */
+  --font-headline-lg-mobile-size: 32px;
+
+  /* Technical Subtitles — Space Grotesk */
+  --font-title-md-family:         'Space Grotesk', sans-serif;
+  --font-title-md-size:           24px;
+  --font-title-md-weight:         700;
+  --font-title-md-line-height:    1.2;
+  --font-title-md-letter-spacing: 0.1em;
+
+  /* Body — Hanken Grotesk */
+  --font-body-lg-family:          'Hanken Grotesk', sans-serif;
+  --font-body-lg-size:            18px;
+  --font-body-lg-weight:          400;
+  --font-body-lg-line-height:     1.6;
+
+  --font-body-sm-family:          'Hanken Grotesk', sans-serif;
+  --font-body-sm-size:            14px;
+  --font-body-sm-weight:          400;
+  --font-body-sm-line-height:     1.5;
+
+  /* Label Caps — Space Grotesk */
+  --font-label-caps-family:       'Space Grotesk', sans-serif;
+  --font-label-caps-size:         12px;
+  --font-label-caps-weight:       600;
+  --font-label-caps-letter-spacing: 0.2em;
+}
+
+:root {
+  --spacing-container-max:  1280px;
+  --spacing-gutter:         24px;
+  --spacing-margin-desktop: 64px;
+  --spacing-margin-mobile:  20px;
+  --spacing-section-gap:    120px;
+
+  --radius-sm:   0.25rem;
+  --radius-base: 0.5rem;
+  --radius-md:   0.75rem;
+  --radius-lg:   1rem;
+  --radius-xl:   1.5rem;
+  --radius-full: 9999px;
+}

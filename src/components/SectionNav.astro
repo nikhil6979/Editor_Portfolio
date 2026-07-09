@@ -1,0 +1,49 @@
+---
+// SectionNav.astro
+export interface Props {
+  active: 'profil' | 'project' | 'contact';
+}
+
+const { active } = Astro.props;
+---
+<nav class="section-nav">
+  <a href="#options" class={`nav-item ${active === 'profil' ? 'active' : ''}`}>PROFIL</a>
+  <a href="#work" class={`nav-item ${active === 'project' ? 'active' : ''}`}>PROJECT</a>
+  <a href="#contact" class={`nav-item ${active === 'contact' ? 'active' : ''}`}>CONTACT PERSON</a>
+</nav>
+
+<style>
+  .section-nav {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border-radius: 20px;
+    padding: 0;
+    margin-bottom: 24px;
+    gap: 8px;
+  }
+
+  .nav-item {
+    font-family: var(--font-body-sm-family);
+    font-size: 10px;
+    color: var(--color-outline);
+    text-decoration: none;
+    padding: 6px 16px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+  }
+
+  .nav-item:hover {
+    color: white;
+  }
+
+  .nav-item.active {
+    background-color: #a3c4f3; /* Light blue from design */
+    color: #000;
+    font-weight: 600;
+  }
+</style>

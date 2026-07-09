@@ -1,0 +1,600 @@
+---
+// Hero.astro — fixed 2-column layout + professional polish
+---
+
+<section class="hero" id="start">
+  <!-- Ambient background glows -->
+  <div class="glow glow-1"></div>
+  <div class="glow glow-2"></div>
+  <!-- Noise texture overlay -->
+  <div class="hero-noise"></div>
+
+  <div class="hero-inner">
+    <!-- ── LEFT COLUMN ────────────────────────────── -->
+    <div class="hero-text">
+      <div class="opentowork-pill">
+        <span class="pulse-dot"></span>
+        Open to Work
+      </div>
+
+      <h1 class="hero-heading">
+        <span class="heading-video">VIDEO</span>
+        <span class="heading-editor">EDITOR<span class="red-dot">.</span></span>
+      </h1>
+
+      <p class="hero-desc">
+        Crafting cinematic experiences since 2024. Specialized in motion
+        graphics, color grading, and high-impact short-form content that stops
+        the scroll.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="#work" class="cta-primary">
+          View Projects
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+          >
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+        <a href="#about" class="cta-ghost">About Me</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">2+</span>
+          <span class="stat-lbl">Years<br />Experience</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat">
+          <span class="stat-num">50+</span>
+          <span class="stat-lbl">Projects<br />Done</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── RIGHT COLUMN ───────────────────────────── -->
+    <div class="hero-visual">
+      <div class="photo-frame">
+        <img
+          src="/11a3b1023d7027897f0e5a592228a0cfac36bf60.png"
+          alt="Nikhil Nishad — Video Editor"
+          class="photo-img"
+        />
+        <div class="photo-grad"></div>
+      </div>
+
+      <!-- Floating chip: top-right -->
+      <div class="chip chip-tr">
+        <div class="chip-icon cc">CC</div>
+        <span>CapCut</span>
+      </div>
+
+      <!-- Floating chip: bottom-left -->
+      <div class="chip chip-bl">
+        <div class="chip-icon pr">Pr</div>
+        <span>Premiere Pro</span>
+      </div>
+
+      <!-- Floating year tag -->
+      <div class="year-tag">2026</div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="scroll-hint">
+    <div class="scroll-line-wrap">
+      <div class="scroll-line-inner"></div>
+    </div>
+    <span>SCROLL</span>
+  </div>
+</section>
+
+<style>
+  /* ═══════════════════════════════════════════════════
+     HERO SECTION
+  ═══════════════════════════════════════════════════ */
+  .hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 64px 80px;
+    overflow: hidden;
+    background: #101415;
+  }
+
+  /* Ambient glows */
+  .glow {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(120px);
+    z-index: 0;
+  }
+  .glow-1 {
+    width: 700px;
+    height: 700px;
+    top: -200px;
+    right: -100px;
+    background: radial-gradient(
+      circle,
+      rgba(123, 208, 255, 0.18) 0%,
+      transparent 70%
+    );
+  }
+  .glow-2 {
+    width: 400px;
+    height: 400px;
+    bottom: -100px;
+    left: 10%;
+    background: radial-gradient(
+      circle,
+      rgba(204, 0, 60, 0.12) 0%,
+      transparent 70%
+    );
+  }
+
+  /* Subtle noise overlay for depth */
+  .hero-noise {
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    opacity: 0.4;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  /* ── Inner grid ──────────────────────────────────── */
+  .hero-inner {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 80px;
+  }
+
+  /* ── Left text column ────────────────────────────── */
+  .hero-text {
+    flex: 1 1 0%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  /* Open to work pill */
+  .opentowork-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: #c6c6cd;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+
+  .pulse-dot {
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #4ade80;
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.5);
+    animation: pulse 2.5s infinite;
+    flex-shrink: 0;
+  }
+
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.5);
+    }
+    70% {
+      box-shadow: 0 0 0 8px rgba(74, 222, 128, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
+    }
+  }
+
+  /* Heading */
+  .hero-heading {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 28px;
+  }
+
+  .heading-video {
+    font-family: "Anton", sans-serif;
+    font-size: clamp(84px, 12vw, 160px);
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: -0.01em;
+    /* Gradient text: white → grey */
+    background: linear-gradient(170deg, #ffffff 0%, #8a9099 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .heading-editor {
+    font-family: "Anton", sans-serif;
+    font-size: clamp(84px, 12vw, 160px);
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: -0.01em;
+    color: #e0e3e5;
+  }
+
+  .red-dot {
+    color: #cc003c;
+  }
+
+  /* Description */
+  .hero-desc {
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 20px;
+    line-height: 1.65;
+    color: #909097;
+    max-width: 480px;
+    margin: 0 0 40px;
+  }
+
+  /* CTAs */
+  .hero-ctas {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 64px;
+  }
+
+  .cta-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #00354a;
+    background: #7bd0ff;
+    height: 52px;
+    padding: 0 32px;
+    border-radius: 999px;
+    transition:
+      box-shadow 0.3s,
+      transform 0.2s;
+  }
+
+  .cta-primary:hover {
+    box-shadow: 0 0 36px rgba(123, 208, 255, 0.5);
+    transform: translateY(-2px);
+  }
+
+  .cta-ghost {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #c6c6cd;
+    height: 52px;
+    padding: 0 28px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition:
+      border-color 0.2s,
+      color 0.2s,
+      background 0.2s;
+  }
+
+  .cta-ghost:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+    color: #e0e3e5;
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  /* Stats */
+  .hero-stats {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .stat-num {
+    font-family: "Anton", sans-serif;
+    font-size: 36px;
+    line-height: 1;
+    color: #e0e3e5;
+  }
+
+  .stat-lbl {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #45464d;
+    line-height: 1.4;
+  }
+
+  .stat-sep {
+    width: 1px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.08);
+    flex-shrink: 0;
+  }
+
+  /* ── Right visual column ─────────────────────────── */
+  .hero-visual {
+    flex: 0 0 auto;
+    width: 440px;
+    position: relative;
+  }
+
+  /* Photo card */
+  .photo-frame {
+    position: relative;
+    width: 100%;
+    height: 580px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #191c1e;
+    box-shadow:
+      0 2px 0 rgba(255, 255, 255, 0.06) inset,
+      0 32px 80px -16px rgba(0, 0, 0, 0.7);
+  }
+
+  .photo-img {
+    width: 120%;
+    height: 150%;
+    object-fit: cover;
+    object-position: center 10;
+    display: block;
+    border-radius: inherit;
+    transform: scale(1.15);
+    transform-origin: center 15%;
+  }
+
+  .photo-grad {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(16, 20, 21, 0) 40%,
+      rgba(16, 20, 21, 0.85) 100%
+    );
+  }
+
+  /* Floating chips */
+  .chip {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 18px 10px 10px;
+    background: rgba(16, 20, 21, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #e0e3e5;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    white-space: nowrap;
+  }
+
+  .chip-tr {
+    top: 40px;
+    right: -24px;
+    animation: float 7s ease-in-out infinite;
+  }
+
+  .chip-bl {
+    bottom: 80px;
+    left: -24px;
+    animation: float 7s ease-in-out infinite 3.5s;
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-12px);
+    }
+  }
+
+  .chip-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .chip-icon.ae {
+    background: #1a0050;
+    color: #cf96ff;
+    border: 1px solid rgba(207, 150, 255, 0.5);
+  }
+
+  .chip-icon.pr {
+    background: #1a0050;
+    color: #ea77ff;
+    border: 1px solid rgba(234, 119, 255, 0.5);
+  }
+
+  /* Year tag */
+  .year-tag {
+    position: absolute;
+    bottom: 32px;
+    right: 24px;
+    font-family: "Anton", sans-serif;
+    font-size: 80px;
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.15);
+    pointer-events: none;
+    user-select: none;
+    z-index: 2;
+  }
+
+  /* ── Scroll hint ─────────────────────────────────── */
+  .scroll-hint {
+    position: absolute;
+    bottom: 32px;
+    left: 64px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 10;
+  }
+
+  .scroll-line-wrap {
+    width: 48px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 1px;
+    overflow: hidden;
+  }
+
+  .scroll-line-inner {
+    height: 100%;
+    width: 100%;
+    background: #7bd0ff;
+    border-radius: 1px;
+    animation: scanline 2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+    transform: translateX(-100%);
+  }
+
+  @keyframes scanline {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(200%);
+    }
+  }
+
+  .scroll-hint span {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: #45464d;
+    text-transform: uppercase;
+  }
+
+  /* ── Responsive ──────────────────────────────────── */
+  @media (max-width: 1100px) {
+    .hero {
+      padding: 100px 40px 80px;
+    }
+    .hero-visual {
+      width: 380px;
+    }
+    .photo-frame {
+      height: 500px;
+    }
+  }
+
+  @media (max-width: 880px) {
+    .hero {
+      padding: 100px 24px 60px;
+    }
+    .hero-inner {
+      flex-direction: column-reverse;
+      gap: 48px;
+      text-align: center;
+    }
+    .hero-text {
+      align-items: center;
+    }
+    .hero-desc {
+      max-width: 100%;
+    }
+    .hero-visual {
+      width: 100%;
+      max-width: 400px;
+    }
+    .photo-frame {
+      height: 420px;
+    }
+    .chip-tr {
+      right: -10px;
+    }
+    .chip-bl {
+      left: -10px;
+    }
+    .hero-stats {
+      justify-content: center;
+    }
+    .scroll-hint {
+      display: none;
+    }
+    .year-tag {
+      font-size: 56px;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .hero-ctas {
+      flex-direction: column;
+      width: 100%;
+      max-width: 300px;
+    }
+    .cta-primary,
+    .cta-ghost {
+      justify-content: center;
+      width: 100%;
+    }
+    .hero-stats {
+      gap: 20px;
+    }
+    .stat-num {
+      font-size: 28px;
+    }
+    .chip {
+      display: none;
+    }
+  }
+</style>
